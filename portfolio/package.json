@@ -11,7 +11,9 @@
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "decap-cms-app": "^3.3.3",
     "framer-motion": "^11.5.4",
+    "frontmatter-markdown-loader": "^3.7.0",
     "lucide-react": "^0.439.0",
     "next": "14.2.8",
     "react": "^18",
