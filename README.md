@@ -14,8 +14,8 @@ Welcome to the repository for my personal developer portfolio! This project show
 - [Next.js](https://nextjs.org/) - React framework for production
 - [Aceternity UI](https://ui.aceternity.com/) - Modern UI component library
 - [Decap CMS](https://decapcms.org/) - Git-based headless CMS
-- TypeScript - For type-safe code
-- TailwindCSS - For component-scoped styling
+- [TypeScript](https://www.typescriptlang.org/) - For type-safe code
+- [TailwindCSS](https://tailwindcss.com/) - For component-scoped styling
 
 ## 🗂️ Project Structure
 
@@ -80,10 +80,6 @@ This project uses Decap CMS for content management. To access the CMS:
 ## 🤝 Contributing
 
 While this is a personal portfolio project, I'm open to suggestions and feedback. Feel free to open an issue or submit a pull request if you have ideas for improvements.
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
