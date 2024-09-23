@@ -74,9 +74,9 @@ Welcome to the repository for my personal developer portfolio! This project show
 This project uses Outstatic CMS for content management. To access the CMS:
 
 1. Update Environment variable in `.env` for your project ([Guide](https://outstatic.com/docs/getting-started))
-1. Navigate to `/outstatic` on your deployed site
-2. Log in using your configured authentication method
-3. Use the intuitive interface to add or edit projects
+2. Navigate to `/outstatic` on your deployed site
+3. Log in using your configured authentication method
+4. Use the intuitive interface to add or edit projects
 
 ## 🤝 Contributing
 
