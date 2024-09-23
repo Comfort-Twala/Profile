@@ -1,28 +1,36 @@
-import Script from "next/script";
-import * as utils from "../libs/utils";
-import * as button from "../components/ui/button";
-import React from "react";
+'use client'
+import { useEffect, useState } from 'react'
+import { OstDocument } from 'outstatic'
 
-export default function Home() {
-  const hero = utils.getMarkup("src/content/homepage", "hero.md");
+export default function HomePage() {
+  const [projects, setProjects] = useState<OstDocument[]>([])
+  // const [posts, setPosts] = useState<OstDocument[]>([])
 
-  if (!hero) {
-    return null;
-  }
+  useEffect(() => {
+    async function fetchContent() {
+      const projectsRes = await fetch('/api/Projects')
+      const projectsData = await projectsRes.json()
+      setProjects(projectsData)
 
-  const { data } = hero;
+      // const postsRes = await fetch('/api/posts')
+      // const postsData = await postsRes.json()
+      // setPosts(postsData)
+    }
+    fetchContent()
+  }, [])
 
- return (
-    <>
-      {/* Enables registering from this page */}
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-      <main>
-        <div className="mt-10 flex flex-col items-center">
-          <h1 className="text-2xl">{data.title}</h1>
-          <p className="text-lg">{data.subtitle}</p>
-          <button.Button>{data.buttonText}</button.Button>
-        </div>
-      </main>
-    </>
-  );
+  return (
+    <div>
+      <h1>Wola Wola Bab' Twala!</h1>
+      <h1>Recent Projects</h1>
+      {projects.map((project) => (
+        <div key={project.slug}>{project.title}</div>
+      ))}
+
+      {/* <h1>Recent Blog Posts</h1> */}
+      {/* {posts.map((post) => ( */}
+        {/* <div key={post.slug}>{post.title}</div> */}
+      {/* ))} */}
+    </div>
+  )
 }

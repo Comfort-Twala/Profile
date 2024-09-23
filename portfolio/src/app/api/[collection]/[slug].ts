@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       const { collection, slug } = req.query
-      const document = await getDocumentBySlug(collection as 'projects' | 'posts', slug as string)
+      const document = await getDocumentBySlug(collection as 'Projects' | 'posts', slug as string)
       if (document) {
         res.status(200).json(document)
       } else {

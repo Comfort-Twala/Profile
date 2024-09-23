@@ -1,10 +1,11 @@
 import { load } from 'outstatic/server'
 import { OstDocument } from 'outstatic'
 
-type Collection = 'projects' | 'posts'
+type Collection = 'Projects' | 'posts'
 
 export async function getAllDocuments(collection: Collection): Promise<OstDocument[]> {
   const data = await load()
+  console.log(data)
   return data.find({
     collection: collection
   }).toArray()
@@ -22,7 +23,7 @@ function capitalize(s: string): string {
 
 // Example of a more specific query function
 export async function getRecentProjects(limit: number = 5): Promise<OstDocument[]> {
-  const projects = await getAllDocuments('projects')
+  const projects = await getAllDocuments('Projects')
   return projects
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .slice(0, limit)

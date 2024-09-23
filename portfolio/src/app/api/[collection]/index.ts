@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       const { collection } = req.query
-      const documents = await getAllDocuments(collection as 'projects' | 'posts')
+      const documents = await getAllDocuments(collection as 'Projects' | 'posts')
       res.status(200).json(documents)
     } catch (error) {
       res.status(500).json({ error: 'Error fetching documents' })
