@@ -13,7 +13,7 @@ Welcome to the repository for my personal developer portfolio! This project show
 
 - [Next.js](https://nextjs.org/) - React framework for production
 - [Aceternity UI](https://ui.aceternity.com/) - Modern UI component library
-- [Decap CMS](https://decapcms.org/) - Git-based headless CMS
+- [Outstatic CMS](https://outstatic.com/) - Git-based headless CMS
 - [TypeScript](https://www.typescriptlang.org/) - For type-safe code
 - [TailwindCSS](https://tailwindcss.com/) - For component-scoped styling
 
@@ -43,7 +43,7 @@ Welcome to the repository for my personal developer portfolio! This project show
 - Skills and technologies section
 - About me page
 - Contact form
-- Content management through Decap CMS
+- Content management through Outstatic CMS
 
 ## 🌐 Live Demo
 
@@ -71,9 +71,10 @@ Welcome to the repository for my personal developer portfolio! This project show
 
 ## 📝 CMS Usage
 
-This project uses Decap CMS for content management. To access the CMS:
+This project uses Outstatic CMS for content management. To access the CMS:
 
-1. Navigate to `/admin` on your deployed site
+1. Update Environment variable in `.env` for your project ([Guide](https://outstatic.com/docs/getting-started))
+1. Navigate to `/outstatic` on your deployed site
 2. Log in using your configured authentication method
 3. Use the intuitive interface to add or edit projects
 
@@ -85,7 +86,7 @@ While this is a personal portfolio project, I'm open to suggestions and feedback
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Aceternity UI](https://ui.aceternity.com/)
-- [Decap CMS Documentation](https://decapcms.org/docs/intro/)
+- [Outstatic CMS Documentation](https://outstatic.com/docs/getting-started)
 
 ## 📞 Contact
 
