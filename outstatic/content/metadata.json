@@ -1,0 +1,42 @@
+{
+  "commit": "e0cdf9be1e65d267b14cd6dfa588fe85b552d99f",
+  "generated": "Wed, 25 Sep 2024 11:11:41 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "9d5f280503684cd2361884cb9d7cd868b2ceffec",
+        "hash": "4292924544",
+        "path": "outstatic/content/projects/buildbyte.md"
+      },
+      "author": {
+        "name": "Comfort Twala",
+        "picture": "https://avatars.githubusercontent.com/u/78382936?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-09-25T11:22:16.032Z",
+      "slug": "buildbyte",
+      "status": "published",
+      "title": "BuildByte"
+    },
+    {
+      "__outstatic": {
+        "commit": "4640382a9d909bf2363f5034f73e82d9f3f4b4c4",
+        "hash": "2098597581",
+        "path": "outstatic/content/projects/varsify.md"
+      },
+      "author": {
+        "name": "Comfort Twala",
+        "picture": "https://avatars.githubusercontent.com/u/78382936?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-09-23T14:04:33.889Z",
+      "slug": "varsify",
+      "status": "published",
+      "title": "Varsify"
+    }
+  ]
+}
