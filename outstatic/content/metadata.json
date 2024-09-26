@@ -1,6 +1,6 @@
 {
-  "commit": "e0cdf9be1e65d267b14cd6dfa588fe85b552d99f",
-  "generated": "Wed, 25 Sep 2024 11:11:41 GMT",
+  "commit": "c88ff0e7482cc2b07eff2cdd92b8b7cc24cb52ab",
+  "generated": "2024-09-26T09:37:43.878Z",
   "metadata": [
     {
       "__outstatic": {
@@ -37,6 +37,24 @@
       "slug": "varsify",
       "status": "published",
       "title": "Varsify"
+    },
+    {
+      "__outstatic": {
+        "commit": "c88ff0e7482cc2b07eff2cdd92b8b7cc24cb52ab",
+        "hash": "2866191837",
+        "path": "outstatic/content/tests/testing-1-2-3.md"
+      },
+      "author": {
+        "name": "Comfort Twala",
+        "picture": "https://avatars.githubusercontent.com/u/78382936?v=4"
+      },
+      "collection": "tests",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-09-26T09:49:06.817Z",
+      "slug": "testing-1-2-3",
+      "status": "published",
+      "title": "Testing 1,2,3"
     }
   ]
 }
