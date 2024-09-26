@@ -1,28 +1,23 @@
-import Script from "next/script";
-import * as utils from "../libs/utils";
-import * as button from "../components/ui/button";
-import React from "react";
+import { getProfileData } from '@/lib/outstatic'
 
-export default function Home() {
-  const hero = utils.getMarkup("src/content/homepage", "hero.md");
+export default async function HomePage() {
+  const { allProjects, otherCollections } = await getProfileData();
+  
+  console.log('Projects:', allProjects); // Check if data is coming through
 
-  if (!hero) {
-    return null;
-  }
-
-  const { data } = hero;
-
- return (
-    <>
-      {/* Enables registering from this page */}
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-      <main>
-        <div className="mt-10 flex flex-col items-center">
-          <h1 className="text-2xl">{data.title}</h1>
-          <p className="text-lg">{data.subtitle}</p>
-          <button.Button>{data.buttonText}</button.Button>
-        </div>
-      </main>
-    </>
+  return (
+    <div>
+      <h1>Wola Wola Bab' Twala!</h1>
+      <h1>Recent Projects</h1>
+      {allProjects.length > 0 ? (
+        allProjects.map((project, index) => (
+          <div key={`${project.slug}-${index}`}>
+            <h2>{project.title}</h2>
+          </div>
+        ))
+      ) : (
+        <p>No projects available</p>
+      )}
+    </div>
   );
 }
