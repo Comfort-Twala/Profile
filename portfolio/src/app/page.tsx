@@ -1,4 +1,5 @@
 import { getProfileData } from '@/lib/outstatic'
+import { NavDock } from '@/components/NavDock';
 
 export default async function HomePage() {
   const { allProjects, otherCollections } = await getProfileData();
@@ -18,6 +19,7 @@ export default async function HomePage() {
       ) : (
         <p>No projects available</p>
       )}
+      <NavDock/>
     </div>
   );
 }
