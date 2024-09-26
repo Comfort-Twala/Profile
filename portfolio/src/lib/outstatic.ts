@@ -10,7 +10,6 @@ function capitalize(s: string): string {
 
 export async function getProfileData() {
   const db = await load()
-
   // get content for the homepage
   // const page = await db
   //   .find({ collection: 'pages', slug: 'home' }, ['content'])
@@ -21,8 +20,10 @@ export async function getProfileData() {
 
   // get all posts. Example of fetching a specific collection
   const allProjects = await db
-    .find({ collection: 'projects', status: 'published' })
-    .sort({ publishedAt: -1 })
+    .find(
+      { collection: 'projects', status: 'published' }, [
+        'title', 'publishedAt', 'slug', 'coverImage', 'description'
+      ])
     .toArray()
 
   // get remaining collections
