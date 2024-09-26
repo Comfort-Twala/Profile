@@ -10,6 +10,7 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import ThemeSwitch from "./ThemeSwitch";
 
 export function NavDock() {
   const links = [
@@ -63,9 +64,9 @@ export function NavDock() {
       href: "#",
     },
     {
-      title: "GitHub",
+      title: "Theme",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <ThemeSwitch />
       ),
       href: "#",
     },
