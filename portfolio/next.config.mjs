@@ -4,7 +4,8 @@ const nextConfig = {
     images: {
         domains: [
             'assets.aceternity.com',
-            'images.unsplash.com'
+            'images.unsplash.com',
+            'avatars.githubusercontent.com'
         ],
     },
 };

@@ -2,12 +2,12 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconUser,
+  IconBriefcase,
+  IconPresentationAnalytics,
+  IconMessageQuestion,
+  IconDeviceMobileMessage,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import ThemeSwitch from "./ThemeSwitch";
@@ -19,49 +19,44 @@ export function NavDock() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#home",
+    },
+    
+    {
+      title: "About",
+      icon: (
+        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#about",
+    },
+    {
+      title: "Work Experience",
+      icon: (
+        <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#experience",
+    },
+    {
+      title: "Projects",
+      icon: (
+        <IconPresentationAnalytics className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#projects",
+    },
+    {
+      title: "Testimonials",
+      icon: (
+        <IconMessageQuestion className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#testimonials",
     },
 
     {
-      title: "Products",
+      title: "Contact",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconDeviceMobileMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <Image
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "#contact",
     },
     {
       title: "Theme",
