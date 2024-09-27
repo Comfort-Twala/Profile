@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { FlipWords } from "../ui/flip-words";
-import { TypewriterEffect, TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import { ContactModal } from "../ContactModal";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import darkPicture from "../../assests/images/trof_cutout.png"
@@ -36,10 +37,11 @@ export function Hero() {
           </h1>
           <FlipWords words={words} className="text-xl sm:text-2xl lg:text-4xl font-black mb-6 md:justify-center" />
           <TypewriterEffectSmooth words={tagline} className="text-lg sm:text-xl lg:text-2xl font-normal text-neutral-600 dark:text-neutral-400 mt-4"/>
+          <ContactModal/>
 
-          <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
-            Next.js Blue
-          </button>
+          {/* <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
+            Let's Chat!
+          </button> */}
         </div>
         <div className="w-full lg:w-[40%] flex justify-center items-center mt-8 lg:mt-0">
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
