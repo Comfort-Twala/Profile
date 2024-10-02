@@ -16,7 +16,7 @@ export function Hero() {
     { text: "Comfort", className: "text-blue-500 dark:text-blue-500" },
     { text: "to" },
     { text: "Complex" },
-    { text: "Problems "}
+    { text: "Problems..."}
   ]
 
   const [mounted, setMounted] = useState(false)
