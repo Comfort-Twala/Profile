@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { FlipWords } from "../ui/flip-words";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import { ContactModal } from "../ContactModal";
+import { ContactModal } from "../helper/ContactModal";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import darkPicture from "../../assests/images/trof_cutout.png"
 
 export function Hero() {
-  const words = ["Fullstack Software Developer", "Problem Solver", "BSc Computer Science & Business Computing", "Freelancer"];
+  const words = ["Fullstack Software Developer", "Problem Solver", "Code Enthusiast", "Freelancer"];
   // Bringing Comfort to Complex Problems
   const tagline = [
     { text: "Bringing" },

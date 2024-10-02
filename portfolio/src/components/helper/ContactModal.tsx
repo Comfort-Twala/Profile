@@ -6,11 +6,11 @@ import {
   ModalContent,
   ModalFooter,
   ModalTrigger,
-} from "./ui/animated-modal";
+} from "../ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IconDeviceMobileMessage, IconMail, IconBrandWhatsapp, IconBrandLinkedin, IconBrandGithub, IconCalendarTime } from '@tabler/icons-react';
-import { LinkPreview } from "./ui/link-preview";
+import { LinkPreview } from "../ui/link-preview";
 
 export function ContactModal() {
   const images = [
