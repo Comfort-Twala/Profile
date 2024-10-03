@@ -10,6 +10,9 @@ import {
     IconCode,
     IconDeviceDesktopAnalytics
 } from "@tabler/icons-react";
+import { Bio } from "@/components/helper/Bio";
+import { Exp } from "@/components/helper/Exp";
+import ContributionGraph from "@/components/helper/ContribGraph";
 
 export function About() {
   return (
@@ -36,7 +39,7 @@ const items = [
   {
     title: "Bio",
     description: "A little about me.",
-    header: <Skeleton />,
+    header: <Bio />,
     icon: <IconInfoSquareRounded className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -48,7 +51,7 @@ const items = [
   {
     title: "Years of Experience",
     description: "I'm just getting started...",
-    header: <Skeleton />,
+    header: <Exp />,
     icon: <IconTool className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -60,7 +63,7 @@ const items = [
   {
     title: "Github Contribution Graph",
     description: "Consistency is key.",
-    header: <Skeleton />,
+    header: <ContributionGraph userName="Comfort-Twala" />,
     icon: <IconDeviceDesktopAnalytics className="h-4 w-4 text-neutral-500" />,
   },
 ];
