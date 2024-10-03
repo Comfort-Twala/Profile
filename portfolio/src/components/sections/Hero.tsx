@@ -27,7 +27,9 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      id="home" 
+      className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-20 gap-8 lg:gap-12">
