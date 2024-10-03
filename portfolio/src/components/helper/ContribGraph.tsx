@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { FollowerPointerCard } from '../ui/following-pointer';
 
 interface ContributionDay {
   contributionCount: number;
@@ -102,11 +103,15 @@ const ContributionGraph: React.FC<{ userName: string }> = ({ userName }) => {
           {data.weeks.slice(-50).map((week, weekIndex) => (
             <div key={weekIndex} className="flex flex-col">
               {week.contributionDays.map((day, dayIndex) => (
-                <div
-                  key={`${weekIndex}-${dayIndex}`}
-                  className={`w-3 h-3 m-0.5 rounded-sm ${getColor(day.contributionCount)}`}
-                  title={`${day.date}: ${day.contributionCount} contributions`}
-                />
+                <FollowerPointerCard
+                  title={`${day.contributionCount} contributions [${day.date}]`}
+                >
+                  <div
+                    key={`${weekIndex}-${dayIndex}`}
+                    className={`w-3 h-3 m-0.5 rounded-sm ${getColor(day.contributionCount)}`}
+                    title={`${day.date}: ${day.contributionCount} contributions`}
+                  /> 
+                </FollowerPointerCard>
               ))}
             </div>
           ))}

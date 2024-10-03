@@ -13,6 +13,8 @@ import {
 import { Bio } from "@/components/helper/Bio";
 import { Exp } from "@/components/helper/Exp";
 import ContributionGraph from "@/components/helper/ContribGraph";
+import { Technologies } from "@/components/helper/Technologies";
+import { Uni } from "@/components/helper/Uni";
 
 export function About() {
   return (
@@ -45,7 +47,7 @@ const items = [
   {
     title: "University of Cape Town",
     description: "BSc in Computer Science & Business Computing",
-    header: <Skeleton />,
+    header: <Uni />,
     icon: <IconSchool className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -55,9 +57,9 @@ const items = [
     icon: <IconTool className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Languages and Tools",
+    title: "Technologies",
     description: "These are what I possess in my arsenal of skills",
-    header: <Skeleton />,
+    header: <Technologies />,
     icon: <IconCode className="h-4 w-4 text-neutral-500" />,
   },
   {

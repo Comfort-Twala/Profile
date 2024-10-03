@@ -6,7 +6,8 @@ const nextConfig = {
             'assets.aceternity.com',
             'images.unsplash.com',
             'avatars.githubusercontent.com',
-            'api.microlink.io'
+            'api.microlink.io',
+            'www.uct.ac.za'
         ],
     },
 };
