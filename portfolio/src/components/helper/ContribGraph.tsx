@@ -39,7 +39,7 @@ const ContributionGraph: React.FC<{ userName: string }> = ({ userName }) => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.GITHUB_API_TOKEN}`,
+            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_GITHUB_API_TOKEN}`,
           },
           body: JSON.stringify({
             query: `
