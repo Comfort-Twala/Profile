@@ -1,8 +1,8 @@
 export function Bio() {
   return (
-    <div className="flex flex-1 w-full justify-center items-center h-full min-h-[6rem] rounded-xl bg-gray-100 dark:bg-card">
-        <p className="text-center text-xl text-foreground px-6">
-          Software Developer with hands-on experience, passionate about creating impactful, scalable solutions. I'm constantly learning and tackling new challenges to deliver innovative results. Ready to take on exciting opportunities and make a difference in the tech world.
+    <div className="flex flex-1 w-full justify-center items-center min-h-[6rem] rounded-xl bg-gray-100 dark:bg-card">
+        <p className="text-l text-center px-2">
+          Software developer with practical experience, focused on building scalable solutions. I enjoy taking on new challenges to create meaningful results. I'm excited to explore new opportunities and contribute to the tech world.
         </p>
     </div>
   )
