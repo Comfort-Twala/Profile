@@ -7,8 +7,9 @@ let interval: any;
 type Card = {
   id: number;
   name: string;
-  designation: string;
-  content: React.ReactNode;
+  logo: any;
+  title: string;
+  period: string;
 };
 
 export const CardStack = ({
@@ -45,7 +46,7 @@ export const CardStack = ({
         return (
           <motion.div
             key={card.id}
-            className="absolute dark:bg-card bg-white h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            className="absolute dark:bg-card bg-white h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-row justify-center"
             style={{
               transformOrigin: "top center",
             }}
@@ -55,15 +56,18 @@ export const CardStack = ({
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
           >
-            <div className="font-normal text-neutral-700 dark:text-neutral-200">
-              {card.content}
+            <div className="w-2/5 flex flex-col justify-center items-center">
+              {card.logo}
             </div>
-            <div>
+            <div className="w-3/5 flex flex-col justify-center items-center">
               <p className="text-neutral-500 font-medium dark:text-white">
                 {card.name}
               </p>
               <p className="text-neutral-400 font-normal dark:text-neutral-200">
-                {card.designation}
+                {card.title}
+              </p>
+              <p className="text-neutral-400 font-small dark:text-neutral-200">
+                {card.period}
               </p>
             </div>
           </motion.div>
