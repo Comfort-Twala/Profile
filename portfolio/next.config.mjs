@@ -5,7 +5,9 @@ const nextConfig = {
         domains: [
             'assets.aceternity.com',
             'images.unsplash.com',
-            'avatars.githubusercontent.com'
+            'avatars.githubusercontent.com',
+            'api.microlink.io',
+            'www.uct.ac.za'
         ],
     },
 };

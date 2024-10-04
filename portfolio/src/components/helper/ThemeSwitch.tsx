@@ -21,5 +21,4 @@ export default function ThemeSwitch() {
   if (resolvedTheme === 'light') {
     return <IconMoon onClick={() => setTheme('dark')} className='h-full w-full text-neutral-500 dark:text-neutral-300' />
   }
-
 }

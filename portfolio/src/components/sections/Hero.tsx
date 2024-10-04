@@ -3,20 +3,20 @@
 import React, { useState, useEffect } from "react";
 import { FlipWords } from "../ui/flip-words";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import { ContactModal } from "../ContactModal";
+import { ContactModal } from "../helper/ContactModal";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import darkPicture from "../../assests/images/trof_cutout.png"
 
 export function Hero() {
-  const words = ["Fullstack Software Developer", "Problem Solver", "BSc Computer Science & Business Computing", "Freelancer"];
+  const words = ["Fullstack Software Developer", "Problem Solver", "Code Enthusiast", "Freelancer"];
   // Bringing Comfort to Complex Problems
   const tagline = [
     { text: "Bringing" },
     { text: "Comfort", className: "text-blue-500 dark:text-blue-500" },
     { text: "to" },
     { text: "Complex" },
-    { text: "Problems "}
+    { text: "Problems..."}
   ]
 
   const [mounted, setMounted] = useState(false)
@@ -27,7 +27,9 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      id="home" 
+      className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-20 gap-8 lg:gap-12">

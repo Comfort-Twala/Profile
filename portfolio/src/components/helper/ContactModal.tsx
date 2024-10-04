@@ -6,10 +6,11 @@ import {
   ModalContent,
   ModalFooter,
   ModalTrigger,
-} from "./ui/animated-modal";
+} from "../ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IconDeviceMobileMessage, IconMail, IconBrandWhatsapp, IconBrandLinkedin, IconBrandGithub, IconCalendarTime } from '@tabler/icons-react';
+import { LinkPreview } from "../ui/link-preview";
 
 export function ContactModal() {
   const images = [
@@ -79,16 +80,14 @@ export function ContactModal() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md mx-auto">
               {contactInfo.map((info, index) => (
-                <a
+                <LinkPreview
                   key={`contact-${index}`}
-                  href={info.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  url={info.href}
                   className="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-200"
-                >
+                  >
                   <info.icon className="mr-3 text-neutral-700 dark:text-neutral-300 h-5 w-5" />
                   <span className="text-neutral-700 dark:text-neutral-300 text-sm">{info.text}</span>
-                </a>
+                </LinkPreview>
               ))}
             </div>
           </ModalContent>

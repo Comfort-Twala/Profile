@@ -9,7 +9,6 @@ import {
   IconMessageQuestion,
   IconDeviceMobileMessage,
 } from "@tabler/icons-react";
-import Image from "next/image";
 import ThemeSwitch from "./ThemeSwitch";
 
 export function NavDock() {
@@ -63,7 +62,7 @@ export function NavDock() {
       icon: (
         <ThemeSwitch />
       ),
-      href: "#",
+      href: "",
     },
   ];
   return (
