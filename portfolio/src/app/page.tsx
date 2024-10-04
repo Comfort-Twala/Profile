@@ -2,6 +2,8 @@ import { getProfileData } from '@/lib/outstatic'
 import { NavDock } from '@/components/helper/NavDock';
 import { Hero } from '@/components/sections/Hero';
 import { About} from '@/components/sections/About';
+import { WorkExp } from '@/components/sections/WorkExp';
+
 
 export default async function HomePage() {
   const { allProjects, otherCollections } = await getProfileData();
@@ -13,6 +15,7 @@ export default async function HomePage() {
       <NavDock/>
       <Hero />
       <About />
+      <WorkExp />
     </>
     // <div>
     //   <h1>Wola Wola Bab' Twala!</h1>
