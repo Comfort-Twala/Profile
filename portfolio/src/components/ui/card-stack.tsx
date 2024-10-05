@@ -26,7 +26,7 @@ export const CardStack = ({
   const [cards, setCards] = useState<Card[]>(items);
 
   useEffect(() => {
-    startFlipping();
+    // startFlipping();
 
     return () => clearInterval(interval);
   }, []);
@@ -39,6 +39,14 @@ export const CardStack = ({
       });
     }, 5000);
   };
+
+  const flipCards = () => {
+    setCards((prevCards: Card[]) => {
+        const newArray = [...prevCards];
+        newArray.unshift(newArray.pop()!);
+        return newArray;
+    });
+  }
 
   return (
     <div className="relative  h-60 w-60 md:h-60 md:w-96">
@@ -55,6 +63,7 @@ export const CardStack = ({
               scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
+            onClick={flipCards}
           >
             <div className="w-2/5 flex flex-col justify-center items-center">
               {card.logo}

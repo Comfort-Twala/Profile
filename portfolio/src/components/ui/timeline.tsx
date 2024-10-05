@@ -6,6 +6,7 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface TimelineEntry {
   title: string;
@@ -32,18 +33,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  console.log("Data:", data)
+
   return (
     <div
-      className="w-full bg-transparent font-sans md:px-10 rounded-3xl hide-scrollbar!"
+      className="w-full bg-transparent font-sans md:px-4 rounded-3xl hide-scrollbar!"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
+          My journey at ${}
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+          <Highlight>
+            Position Milestones
+          </Highlight>
         </p>
       </div>
 
@@ -86,5 +90,25 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
       </div>
     </div>
+  );
+};
+
+// Small utility to highlight the content of specific section of a testimonial content
+export const Highlight = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <span
+      className={cn(
+        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
+        className
+      )}
+    >
+      {children}
+    </span>
   );
 };
