@@ -3,9 +3,10 @@ import { Timeline } from "@/components/ui/timeline";
 
 interface ExperienceProps {
   currentExperience: number;
+  workplace: string
 }
 
-export function Experience({ currentExperience }: ExperienceProps) {
+export function Experience({ currentExperience, workplace }: ExperienceProps) {
   const data: Record<number, any[]> = {
     0: [
       {
@@ -173,7 +174,10 @@ export function Experience({ currentExperience }: ExperienceProps) {
 
   return (
     <div className="w-full">
-      <Timeline data={data[`${currentExperience}`]} />
+      <Timeline
+        data={data[`${currentExperience}`]} 
+        workplace={workplace}  
+      />
     </div>
   );
 }

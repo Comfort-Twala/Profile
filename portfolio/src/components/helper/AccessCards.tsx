@@ -1,10 +1,20 @@
 "use client";
 import { CardStack } from "../ui/card-stack";
 
-export function AccessCards(cards: any, currentExperience: number) {
+interface AccessCardsProps {
+  cards: any,
+  onExperienceChange: (index: number) => void
+}
+
+export function AccessCards( { cards, onExperienceChange}: AccessCardsProps) {
+  console.log("Access Cards: ", cards);
+
   return (
-    <div className="h-[40rem] flex items-center justify-center w-full">
-      <CardStack items={cards["cards"]} />
+    <div className="h-[20rem] flex flow-col items-center justify-center w-full">
+      <CardStack 
+        items={cards} 
+        experienceUpdate={onExperienceChange}
+      />
     </div>
   );
 }

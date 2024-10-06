@@ -16,10 +16,12 @@ export const CardStack = ({
   items,
   offset,
   scaleFactor,
+  experienceUpdate,
 }: {
   items: Card[];
   offset?: number;
   scaleFactor?: number;
+  experienceUpdate: (index: number) => void;
 }) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
@@ -44,10 +46,12 @@ export const CardStack = ({
     setCards((prevCards: Card[]) => {
         const newArray = [...prevCards];
         newArray.unshift(newArray.pop()!);
+        experienceUpdate(newArray.at(0)!.id);
         return newArray;
     });
   }
 
+  console.log("cards:", cards);
   return (
     <div className="relative  h-60 w-60 md:h-60 md:w-96">
       {cards.map((card, index) => {

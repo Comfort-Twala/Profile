@@ -54,13 +54,14 @@ export function WorkExp() {
           <div className='w-2/5'>
               <AccessCards 
                 cards={CARDS}
-                currentExperience={currentExperience}
                 onExperienceChange={handleExperienceChange}
               />
+            <p className="text-center text-mute-foreground">Click on Cards to toggle</p>
           </div>
           <div className='w-3/5 overflow-y-scroll hide-scrollbar h-[90%]'>
             <Experience
               currentExperience={currentExperience}
+              workplace={CARDS[currentExperience].name}
             />
           </div>
         </div>
