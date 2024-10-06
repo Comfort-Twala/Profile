@@ -18,7 +18,7 @@ import { Uni } from "@/components/helper/Uni";
 export function About() {
   return (
     <div id="about" 
-      className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      className="min-h-screen w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
         <BentoGrid className="max-w-4xl mx-auto">
           {items.map((item, i) => (
             <BentoGridItem
