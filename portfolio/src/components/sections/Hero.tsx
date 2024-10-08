@@ -34,7 +34,7 @@ export function Hero() {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-20 gap-8 lg:gap-12">
         <div className="w-full lg:w-[60%] text-center lg:text-left">
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 mb-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold bg-clip-text text-gray-900 dark:text-gray-100 mb-4">
             Comfort Twala
           </h1>
           <FlipWords words={words} className="text-xl sm:text-2xl lg:text-4xl font-black mb-6 md:justify-center" />
