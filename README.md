@@ -41,6 +41,7 @@ Welcome to the repository for my personal developer portfolio! This project show
 - Server-side rendering and static site generation with Next.js
 - Dynamic project showcase with detailed case studies
 - Skills and technologies section
+- Work Experience
 - About me page
 - Contact form
 - Content management through Outstatic CMS
